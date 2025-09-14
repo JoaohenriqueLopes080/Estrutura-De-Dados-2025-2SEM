@@ -1,7 +1,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/* 2. Implemente uma função que receba como parâmetro um vetor de números reais (vet) de tamanho n e retorne quantos números negativos estão armazenados neste vetor. Esta função deve obedecer ao protótipo: int negativos (int n, float *vet) Use alocação dinâmica. O valor de n é informado pelo usuário. */
+/* 2. Implemente uma função que receba como parâmetro um
+ vetor de números reais (vet) de tamanho n e retorne 
+ quantos números negativos estão armazenados neste vetor.
+  Esta função deve obedecer ao protótipo: 
+  int negativos (int n, float *vet)
+   Use alocação dinâmica.
+    O valor de n é informado pelo usuário.
+     */
+
+     
 int negativos(int n, float *vet) {
     int contador = 0;
     for (int i = 0; i < n; i++) {

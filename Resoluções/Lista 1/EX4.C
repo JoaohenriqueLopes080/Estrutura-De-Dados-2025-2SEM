@@ -1,9 +1,12 @@
+/*
+4. Fazer um programa que leia dez números e escreva-os na ordem contrária à ordem de leitura. Exemplo:
+lê: 7 40 3 9 21 0 63 31 7 22
+escreve: 22 7 31 63 0 21 9 3 40 7
+Use alocação dinâmica. O programa deve ser estruturado nas seguintes funções:
 
-/*Implemente uma função que receba como parâmetro um vetor de números inteiros (vet) de tamanho
-n e inverta a ordem dos elementos armazenados neste vetor. Esta função deve obedecer ao protótipo:
-
-void inverte (int n, int *vet)
-Use alocação dinâmica. O valor de n é informado pelo usuário.*/
+a. Main: aloca o vetor e faz a leitura do vetor
+b. Função 1: escreve o vetor na ordem contrária
+*/
 
 
 #include <stdio.h>
@@ -11,11 +14,9 @@ Use alocação dinâmica. O valor de n é informado pelo usuário.*/
 void inverte( int n, int *vet);
 
 int main() {
-    int n, i;
+    int n = 10;
     int *vet;
     
-    printf("Digite o tamanho de vet");
-    scanf("%d", &n);
 
     vet = (int*) malloc(n * sizeof(int)) 
 
@@ -35,23 +36,16 @@ int main() {
     }
 
 
-    inverte(n, vet);
+    inverso(n, vet);
 
-    printf("\nVetor invertido:\n");
-      for (int i = 0; i < n; i++) {
-        printf("%d ", vet[i]);
-    }
-
+    
     free(vet);
     return 0;
 }
 
-void inverte(int n, int *vet) {
+void inverso(int n, int *vet) {
     int aux;
-    for (int i = 0; i < n / 2; i++) {
-        aux = vet[i];
-        vet[i] = vet[n - 1 - i];
-        vet[n - 1 - i] = aux;
+    for (int i = n - 1; i >= 0; i--) {
+        printf("%d ", vet[i]);
     }
-
 }
