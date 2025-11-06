@@ -35,7 +35,7 @@ int main() {
 
     printf("Matriz:\n");
     imprime_matriz(n, m, mat);
-
+        free(mat);
     return 0;
 }
 
@@ -46,5 +46,4 @@ void imprime_matriz(int n, int m, int* mat) {
         }
         printf("\n");
     }
-    free(mat);
 }

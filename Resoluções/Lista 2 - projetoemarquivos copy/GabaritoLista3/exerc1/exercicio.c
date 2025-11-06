@@ -8,7 +8,7 @@ int comprimento (Lista* l)
 	int numNos=0;
 	while (p!=NULL)
 	{
-		p=p->prox;
+		p=p->prox; 
 		numNos++;
 	}//while
 	return numNos;
