@@ -11,38 +11,38 @@ void imprime_matriz (int m, int n, int* mat)
 void imprime_matriz(int m, int n, int* mat);
 
 int main() {
-    int n;
     int m;
+    int n;
     int* mat;
 
     printf("Digite o numero de linhas: ");
-    scanf("%d", &n);
-    printf("Digite o numero de colunas: ");
     scanf("%d", &m);
+    printf("Digite o numero de colunas: ");
+    scanf("%d", &n);
 
-    mat = (int*) malloc(n * m * sizeof(int));
+    mat = (int*) malloc(m * n * sizeof(int));
     if (!mat) {
         printf("Erro de Alocação");
         return 1;
     }
 
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j < m; j++) {
+    for (int i = 0; i < m; i++) {
+        for (int j = 0; j < n; j++) {
             printf("Digite o elemento [%d][%d]: ", i + 1, j + 1);
-            scanf("%d", &mat[i * m + j]);
+            scanf("%d", &mat[i * n + j]);
         }
     }
 
     printf("Matriz:\n");
-    imprime_matriz(n, m, mat);
+    imprime_matriz(m, n, mat);
         free(mat);
     return 0;
 }
 
 void imprime_matriz(int n, int m, int* mat) {
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j < m; j++) {
-            printf("%d ", mat[i * m + j]);
+    for (int i = 0; i < m; i++) {
+        for (int j = 0; j < n; j++) {
+            printf("%d ", mat[i * n + j]);
         }
         printf("\n");
     }
