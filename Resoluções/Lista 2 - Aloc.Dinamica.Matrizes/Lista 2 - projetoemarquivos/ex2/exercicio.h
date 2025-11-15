@@ -19,7 +19,7 @@ void imprime_matriz (int m, int n, int** mat)
  #define exercicio_h
 
 /**
- * Explicação da Função Usada
+ * Explicação da Função imprime_matriz
  * @brief Imprime na tela os elementos de uma matriz alocada dinamicamente como
  * um vetor simples (m x n).
  * @param m Numero de linhas da matriz
@@ -27,6 +27,6 @@ void imprime_matriz (int m, int n, int** mat)
  * @param mat Ponteiro para o primeiro elemento da matriz(vetor de inteiros)
  */
 
- void imprime_matriz(int m, int n, int* mat);
+ void imprime_matriz(int m, int n, int** mat);
 
  #endif // exercicio_h
