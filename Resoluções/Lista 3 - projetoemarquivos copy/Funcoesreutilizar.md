@@ -1,14 +1,6 @@
-/*
-3. Implemente uma função que tenha como valor de retorno o ponteiro para o último nó 
-de uma lista encadeada. Esta função deve obedecer ao protótipo:  Lista* ultimo (Lista* l)
-*/
-
-
-#include "exercicio.h"
-#include <stdio.h>
 
 /**
- *@file exercicio.c 
+ *@file funcoesreutilizar.md
  *@brief Arquivo de implementação das funções escritas em cabeçalhos 
  */
 
@@ -80,38 +72,7 @@ Lista* lst_busca(Lista* l, int v)
     return NULL; /* não achou o elemento. */
 }
 
-/** Função para verificar quantidade de numeros maiores que ele mesmo */
-int lst_maiores(Lista* l, int n){
-    Lista* p = l; // no auxiliar
-    int contador = 0;
-    while(p != NULL){
-        if(p->info > n){
-           
-             contador++;
-        }
-        p = p->proximo;
-    }
-    return contador;
-}
 
-
-/* Função para encontrar o ultimo Nó da lista*/
- Lista* lst_ultimo (Lista* l){
-    if(l == NULL){
-        return NULL;
-    }
-    Lista* p; // variavel auxiliar para travessaria de lista com 1 nó ou mais.
-
-
-    // A condição de parada é quando o próximo nó for NULL.
-    // Se a lista tem apenas um nó (l->proximo == NULL),
-    // o loop não executa e a função retorna l.
-    while(p->proximo != NULL){
-       p = p->proximo;
-    }
-    // retorna ultimo nó
-    return p;
- }
 
 /*Função Libera */
 void lst_libera (Lista* l)
@@ -123,4 +84,6 @@ void lst_libera (Lista* l)
 	p = l; /* faz p apontar para o próximo */
 	}
 }
+
+
 

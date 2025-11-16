@@ -1,14 +1,15 @@
-/* 1. Implemente uma função que tenha como valor de retorno o comprimento de uma lista 
-encadeada, isto é calcule o número de nós de uma lista. Esta função deve obedecer ao 
-protótipo:  int comprimento (Lista* l); 
+/*
+3. Implemente uma função que tenha como valor de retorno o ponteiro para o último nó 
+de uma lista encadeada. Esta função deve obedecer ao protótipo:  Lista* ultimo (Lista* l)
 */
+
 
 /**
  * @file exercicio.h
  * @brief cabeçalho de lista encadeada ex 1
  */
 
- #ifndef EXERCICIO_H 
+#ifndef EXERCICIO_H 
 #define EXERCICIO_H
 
 #include <stdlib.h> // biblioteca para utilização de NULL.
@@ -58,7 +59,20 @@ void lst_libera (Lista* l);
 
  int comprimento(Lista* l);
 
+  /**
+  * @brief função para ver numeros maiores que n
+  * @param l Ponteiro para o endereço do primeiro no da lista
+  * @param n numero escolhido para achar numeros maiores que ele
+  */
 
+ int lst_maiores (Lista* l, int n);
+
+
+/**
+ * @brief verifica o ultimo nó da lista encadeada
+ * @param l ponteiro para endereço do primeiro nó da lista.
+ */
+Lista* lst_ultimo(Lista* l);
 
 
  #endif //exercicio.h

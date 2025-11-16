@@ -8,7 +8,7 @@ int comprimento (Lista* l)
 	int numNos=0;
 	while (p!=NULL)
 	{
-		p=p->prox;
+		p=p->prox; 
 		numNos++;
 	}//while
 	return numNos;
@@ -17,15 +17,15 @@ int comprimento (Lista* l)
 /* função de criação: retorna uma lista vazia */
 Lista* lst_cria (void)
 {
-	return NULL;
+	return NULL; // lista começa vazia - null
 }
 
 /* inserção no início: retorna a lista atualizada */
 Lista* lst_insere (Lista* l, int i)
 {
 	Lista* novo = (Lista*) malloc(sizeof(Lista));
-	novo->info = i;
-	novo->prox = l;
+	novo->info = i; // info == valor que voce vai inserir.
+	novo->prox = l; // proximo = 
 	return novo;
 }
 

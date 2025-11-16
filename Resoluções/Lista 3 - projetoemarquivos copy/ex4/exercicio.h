@@ -1,6 +1,8 @@
-/* 1. Implemente uma função que tenha como valor de retorno o comprimento de uma lista 
-encadeada, isto é calcule o número de nós de uma lista. Esta função deve obedecer ao 
-protótipo:  int comprimento (Lista* l); 
+/*
+4. Implemente  uma  função  que  receba  duas  listas  encadeadas  de  valores  inteiros  e 
+retorne  a lista resultante  da concatenação  das duas listas recebidas como parâmetros, 
+isto  é,  após  a  concatenação,  o  último  elemento  da  primeira  lista  deve  apontar  para  o 
+primeiro elemento da segunda lista. Esta função deve obedecer ao protótipo: Lista* concatena (Lista* l1, Lista* l2);
 */
 
 /**
@@ -40,6 +42,10 @@ Lista* lst_busca(Lista* l, int v);
  // Prototipo de Função auxiliar para criar a lista (teste no main)
  Lista* lst_insere(Lista* l, int i); 
 
+ // Prototipo de Função auxiliar para criar a lista em Loop;
+  Lista* lst_insere_loop(Lista* l,int n);
+
+
  /**
   * @brief Imprime a lista encadeada  */
  void lst_imprime (Lista* l);
@@ -58,7 +64,24 @@ void lst_libera (Lista* l);
 
  int comprimento(Lista* l);
 
+ /**
+  * @brief função para ver numeros maiores que n
+  * @param l Ponteiro para o endereço do primeiro no da lista
+  * @param n numero escolhido para achar numeros maiores que ele
+  */
+
+ int lst_maiores (Lista* l, int n);
 
 
+/**
+ * @brief verifica o ultimo nó da lista encadeada
+ * @param l ponteiro para endereço do primeiro nó da lista.
+ */
+Lista* lst_ultimo(Lista* l);
 
- #endif //exercicio.h
+/**
+ *@brief Contatenação de 2 listas encadeadas
+ */
+Lista* lst_concatena (Lista* l1, Lista* l2);
+
+ #endif //exercicio_h

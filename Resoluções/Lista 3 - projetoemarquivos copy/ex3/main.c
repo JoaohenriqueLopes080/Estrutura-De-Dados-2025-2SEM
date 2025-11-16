@@ -1,7 +1,8 @@
-/* 1. Implemente uma função que tenha como valor de retorno o comprimento de uma lista 
-encadeada, isto é calcule o número de nós de uma lista. Esta função deve obedecer ao 
-protótipo:  int comprimento (Lista* l); 
+/*
+3. Implemente uma função que tenha como valor de retorno o ponteiro para o último nó 
+de uma lista encadeada. Esta função deve obedecer ao protótipo:  Lista* ultimo (Lista* l)
 */
+
 
 /**
  * @file main.c
@@ -20,27 +21,27 @@ int main(void) {
     l = lst_insere(l, 85);
     l = lst_insere(l, 105);
 
-    int nos = comprimento(l);
-    printf("O numero de nós é: %d", nos);
+    int ultimo = lst_ultimo(l);
+    printf("O ultimo nó da lista é: %d", ultimo);
+    
     lst_imprime(l);
 
     lst_libera(l);
-
+    
     /* Lista* lis = lst_busca(Lista*l, v)  - > v = valor que quer buscar - altere o valor
         if(lis == NULL) {
         printf("O nó não foi encontrado")
         } else {
          printf("O nó de valor %d foi encontrado", lis->info);
         }
-    
+    */
     int retorno = lst_vazia(l);
     if(retorno == 1){
         printf("Lista Esta Vazia");
     } else{
         printf("Lista Não esta Vazia");
     }
-    */
-   
+
     system("PAUSE");
     return 0;
 }
